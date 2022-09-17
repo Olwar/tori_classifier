@@ -35,7 +35,7 @@ def predict():
 
 def play():
     pygame.mixer.init()
-    pygame.mixer.music.load("/home/olli/Downloads/bg_music.mp3")
+    pygame.mixer.music.load("bg_music.mp3")
     pygame.mixer.music.play(loops=100)
 
 root = tk.Tk()
@@ -45,8 +45,8 @@ root.configure(bg='white')
 
 window_final= tk.Frame(root, bg='white')
 window_final.pack(padx=10, pady=10, expand=True)
-img = ImageTk.PhotoImage(Image.open('/home/olli/Desktop/Koodauskrääsää/githubs/tori_classifier/tori.png'))
-label_img = tk.Label(window_final, image = img, pady=10)
+img = ImageTk.PhotoImage(Image.open('tori.png'))
+label_img = tk.Label(window_final, image = img, pady=10, bg='white')
 label_img.pack()
 
 label = tk.Label(window_final, text="Enter Image: ", bg='white')
