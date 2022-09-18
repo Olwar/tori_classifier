@@ -49,19 +49,20 @@ img = ImageTk.PhotoImage(Image.open('tori.png'))
 label_img = tk.Label(window_final, image = img, pady=10, bg='white')
 label_img.pack()
 
-label = tk.Label(window_final, text="Enter Image: ", bg='white')
-entry = tk.Entry(window_final, fg="red", bg="white", width=50)
+label = tk.Label(window_final, text="Enter Path of Image: ", bg='white', font=("Calibri", 25))
+entry = tk.Entry(window_final, fg="red", bg="white", width=100)
 entry.focus()
 
-label.pack()
-entry.pack()
+label.pack(pady=10)
+entry.pack(pady=10)
 
 enter_button = tk.Button(
     window_final, 
     text="upload image", 
     command=predict, 
     justify='center',
-    activebackground='red'
+    activebackground='red',
+    font="Calibri"
     )
 enter_button.pack(side='bottom')
 
