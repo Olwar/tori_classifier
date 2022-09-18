@@ -9,7 +9,6 @@ import pygame
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from tensorflow.keras.applications.inception_v3 import preprocess_input
 from tensorflow.keras.preprocessing import image
-from tensorflow.keras.preprocessing import image_dataset_from_directory
 
 # Loading trained model
 model_file = '/home/olli/Desktop/Koodauskrääsää/githubs/tori_classifier/tori_classifier_model.sav'
