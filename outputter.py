@@ -5,6 +5,8 @@ import tkinter as tk
 from PIL import ImageTk, Image
 from tkinter.messagebox import showinfo
 import pygame
+from selenium import webdriver
+
 # Disabling tensorflow import error messages
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 from tensorflow.keras.applications.inception_v3 import preprocess_input
@@ -21,6 +23,11 @@ def preprocess_image(img_path):
     img_batch = np.expand_dims(img_array, axis=0)
     img_final = preprocess_input(img_batch)
     return img_final
+
+# Autofilling
+def autofill():
+    web = webdriver.Chrome()
+    web.get('https://www2.tori.fi/ai/form/0')
 
 def predict():
     file = entry.get()
