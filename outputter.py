@@ -37,7 +37,7 @@ def predict():
     if prediction == 0:
         showinfo(title='Result', message="Not a chair")
     else:
-        showinfo(title='Result', message="Category")
+        showinfo(title='Result', message="Sisustus ja huonekalut > Pöydät ja tuolit")
 
 def play():
     pygame.mixer.init()
