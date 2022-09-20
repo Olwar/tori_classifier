@@ -5,7 +5,6 @@ import tkinter as tk
 from PIL import ImageTk, Image
 from tkinter.messagebox import showinfo
 import pygame
-from selenium import webdriver
 
 # Disabling tensorflow import error messages
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
@@ -13,7 +12,7 @@ from tensorflow.keras.applications.inception_v3 import preprocess_input
 from tensorflow.keras.preprocessing import image
 
 # Loading trained model
-model_file = '/home/olli/Desktop/Koodauskrääsää/githubs/tori_classifier/tori_classifier_model.sav'
+model_file = 'tori_classifier_model.sav'
 model = pickle.load(open(model_file, 'rb'))
 
 # Preprocessing image for the model's preferred input
